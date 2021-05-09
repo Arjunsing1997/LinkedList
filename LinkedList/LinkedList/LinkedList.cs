@@ -198,6 +198,70 @@ namespace LinkedList
             }
         }
         /// <summary>
+        /// Deletes the element.
+        /// </summary>
+        /// <param name="data">The data.</param>
+        public void DeleteElement(int data)
+        {
+            bool flag = false;
+            int count = 0;
+
+            if (head == null)
+                Console.WriteLine("List is Empty");
+            else
+            {
+                Node temp = head;
+                Node previousNode = null;
+                while (temp != null)
+                {
+
+                    if (temp.data == data)
+                    {
+                        if (count == 1)
+                        {
+                            head = temp.next;
+                        }
+                        previousNode.next = temp.next;
+
+                        flag = true;
+
+                        break;
+                    }
+                    previousNode = temp;
+                    temp = temp.next;
+
+                }
+                if (!flag)
+                {
+                    Console.WriteLine($"{data} Element Not Found in Linked List");
+                }
+                else
+                {
+                    Console.WriteLine($"Successfully Delete Element {data}");
+
+                }
+            }
+
+
+            //return flag; 
+        }
+
+        public int Count()
+        {
+            int count = 0;
+
+            Node temp = head;
+            while (temp != null)
+            {
+                temp = temp.next;
+                count++;
+            }
+            Console.WriteLine($"Linked List Count is {count}");
+
+            return count;
+
+        }
+        /// <summary>
         /// Displays this instance.
         /// </summary>
         public void Display() //create Display Method

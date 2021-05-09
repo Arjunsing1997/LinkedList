@@ -53,11 +53,21 @@ namespace LinkedList
             //list.Search(56); //Search Element in Linked List //UC7
 
 
-            list.Add(56); // Adding data in list //UC8
-            list.Add(30); // Adding data in list //UC8
-            list.Add(70); // Adding data in list //UC8
-            list.Display(); //call Display method to print data//UC8
-            list.InsertAtAfterValue(30, 40); //Call InsertAtAfterValue pass value //UC8
+            //list.Add(56); // Adding data in list //UC8
+            //list.Add(30); // Adding data in list //UC8
+            //list.Add(70); // Adding data in list //UC8
+            //list.Display(); //call Display method to print data//UC8
+            //list.InsertAtAfterValue(30, 40); //Call InsertAtAfterValue pass value //UC8
+
+            list.Add(56); // Adding data in list //UC9
+            list.Add(30); // Adding data in list //UC9
+            list.Add(40); // Adding data in list //UC9
+            list.Add(70); // Adding data in list //UC9
+            list.Display(); //call Display method to print data//UC9
+            list.Count(); //call count method
+            list.DeleteElement(40); //call DeleteElement method pass parameter // UC9     
+            list.Display(); // Display //UC9
+            list.Count(); //call count method and print count//UC9
 
             list.Display();
             Console.ReadLine();

@@ -33,11 +33,17 @@ namespace LinkedList
             //list.InsertAtParticularPosition(2, 30);//UC4
 
             //Deleting a Node 
-            list.Add(56); // Adding data in list //UC5
-            list.Add(30); // Adding data in list //UC5
-            list.Add(70); // Adding data in list //UC5
+            //list.Add(56); // Adding data in list //UC5
+            //list.Add(30); // Adding data in list //UC5
+            //list.Add(70); // Adding data in list //UC5
+            //list.Display(); //call Display method to print data
+            //list.DeleteFirstNode(); // Adding data in list //UC5
+
+            list.Add(56); // Adding data in list //UC6
+            list.Add(30); // Adding data in list //UC6
+            list.Add(70); // Adding data in list //UC6
             list.Display(); //call Display method to print data
-            list.DeleteFirstNode(); // Adding data in list //UC5
+            list.DeleteLastNode(); // Adding data in list //UC6
 
 
             list.Display();

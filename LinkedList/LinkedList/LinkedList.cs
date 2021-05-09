@@ -97,8 +97,29 @@ namespace LinkedList
                     Console.WriteLine($"Position Out Of Range{ position}");
                 }
             }
+            Console.WriteLine($"Successfully added Position of Element {position},{data}");
             return head;
         }
+
+        /* UC5:- Ability to delete the first element in the LinkedList of sequence 56->30->70.
+                 - Write pop method. 
+                 - Note there is new head.
+                 - Final Sequence: 30->70.
+          */
+
+        public void DeleteFirstNode()
+        {
+            Node temp = this.head;
+            if (temp == null)
+            {
+                Console.WriteLine("Linked List is Empty");
+                return;
+            }
+            head = temp.next;
+            Console.WriteLine($"Successfully Delete First Element {temp.data}");
+
+        }
+
 
 
         public void Display() //create Display Method
@@ -113,7 +134,7 @@ namespace LinkedList
             {
                 while (temp != null)
                 {
-                    Console.WriteLine($" {temp.data} ");//print Node
+                    Console.WriteLine($"Linked List Element:- {temp.data} ");//print Node
                     temp = temp.next; //point to next node
                 }
             }

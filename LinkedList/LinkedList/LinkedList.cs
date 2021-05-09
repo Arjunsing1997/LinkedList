@@ -142,6 +142,29 @@ namespace LinkedList
             }
 
         }
+        /// <summary>
+        /// Searches the specified value.
+        /// </summary>
+        /// <param name="value">The value.</param>
+        /// <returns></returns>
+        public int Search(int value)
+        {
+            int count = 0;
+            Node temp = this.head;
+            while (temp != null)
+            {
+                if (temp.data == value)
+                {
+                    Console.WriteLine($"{value} Searching Element Present in Linked List");
+                    return count;
+                }
+
+                temp = temp.next;
+                count++;
+            }
+            Console.WriteLine($"{value} Element Not Found in Linked List");
+            return count;
+        }
 
         public void Display() //create Display Method
         {

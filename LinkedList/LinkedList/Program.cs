@@ -39,11 +39,18 @@ namespace LinkedList
             //list.Display(); //call Display method to print data
             //list.DeleteFirstNode(); // Adding data in list //UC5
 
-            list.Add(56); // Adding data in list //UC6
-            list.Add(30); // Adding data in list //UC6
-            list.Add(70); // Adding data in list //UC6
-            list.Display(); //call Display method to print data
-            list.DeleteLastNode(); // Adding data in list //UC6
+            //list.Add(56); // Adding data in list //UC6
+            //list.Add(30); // Adding data in list //UC6
+            //list.Add(70); // Adding data in list //UC6
+            //list.Display(); //call Display method to print data
+            //list.DeleteLastNode(); // Adding data in list //UC6
+
+            //Search Operation
+            list.Add(56); // Adding data in list //UC7
+            list.Add(30); // Adding data in list //UC7
+            list.Add(70); // Adding data in list //UC7
+            list.Display(); //call Display method to print data//UC7
+            list.Search(56); //Search Element in Linked List //UC7
 
 
             list.Display();

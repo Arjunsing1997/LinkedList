@@ -165,7 +165,41 @@ namespace LinkedList
             Console.WriteLine($"{value} Element Not Found in Linked List");
             return count;
         }
+        /// <summary>
+        /// Inserts at after value.
+        /// </summary>
+        /// <param name="after">The after.</param>
+        /// <param name="data">The data.</param>
+        public void InsertAtAfterValue(int after, int data)
+        {
 
+            if (head == null)
+            {
+                Console.WriteLine("Linked list is Empty");
+            }
+            else
+            {
+                Node temp = head;
+
+                while (temp != null)
+                {
+                    if (temp.data == after)
+                    {
+                        Node node = new Node(data);
+                        node.next = temp.next;
+                        temp.next = node;
+                        break;
+                    }
+                    temp = temp.next;
+                }
+                Console.WriteLine($"Successfully added Element {after} After {data}");
+
+
+            }
+        }
+        /// <summary>
+        /// Displays this instance.
+        /// </summary>
         public void Display() //create Display Method
         {
             Node temp = this.head;

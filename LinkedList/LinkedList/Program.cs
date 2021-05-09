@@ -24,10 +24,14 @@ namespace LinkedList
             //list.InsertFront(56);// Adding data in list //UC2
 
             //Appending Operation
-            list.Appending(56);// Adding data in list //UC3
-            list.Appending(30);// Adding data in list //UC3
-            list.Appending(70);// Adding data in list //UC3
-            
+            //list.Appending(56);// Adding data in list //UC3
+            //list.Appending(30);// Adding data in list //UC3
+            //list.Appending(70);// Adding data in list //UC3
+
+            list.Add(56); // Adding data in list //UC4            
+            list.Add(70); // Adding data in list //UC4
+            list.InsertAtParticularPosition(2, 30);//UC4
+
             list.Display();
             Console.ReadLine();
         }

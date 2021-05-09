@@ -12,7 +12,7 @@ namespace LinkedList
         public Node head; //first node head
         /* UC1:- Lets create a simple Linked List of 56, 30 and 70
           */
-        public void InsertLast(int new_data)
+        public void Add(int new_data)
         {
             Node new_node = new Node(new_data); //create object Node  
             if (this.head == null)
@@ -60,7 +60,44 @@ namespace LinkedList
 
         public void Appending(int value)
         {
-            InsertLast(value);
+            Add(value);
+        }
+
+
+        /* UC4:- Ability to insert 30 between 56 and 70.
+                 - Final Sequence: 56->30->70.
+         */
+        public Node InsertAtParticularPosition(int position, int data)
+        {
+            if (position < 1)
+            {
+                Console.WriteLine($"Invalid Position{ position}");
+            }
+            if (position == 1)
+            {
+                var newNode = new Node(data); //create object and passing data
+                newNode.next = this.head;
+                head = newNode;
+            }
+            else
+            {
+                while (position-- != 0)
+                {
+                    if (position == 1)
+                    {
+                        Node node = new Node(data);
+                        node.next = this.head.next;
+                        head.next = node;
+                        break;
+                    }
+                    head = head.next;
+                }
+                if (position != 1)
+                {
+                    Console.WriteLine($"Position Out Of Range{ position}");
+                }
+            }
+            return head;
         }
 
 
@@ -82,5 +119,6 @@ namespace LinkedList
             }
 
         }
+
     }
 }
